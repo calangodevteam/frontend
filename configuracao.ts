@@ -5,3 +5,4 @@ export const Configuracao = {
     parametroDeSort: { chave: "sort", valor: "desc" },
     parametroDePage: { chave: "page", valor: "0" }
 };
+
