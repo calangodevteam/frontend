@@ -28,8 +28,9 @@ jobs:
 
      - name: Deploy to gh pages
        run: |
-         npx angular-cli-ghpages --dir=dist/calango-dev/browser
+         ls -l dist/calango-dev
+         npx angular-cli-ghpages --dir=dist/calango-dev
        env:
          CI: true
-         GHPAGES: ${{ secrets.GHPAGES }}
+         GH_TOKEN: ${{ secrets.GHPAGES }}
      
