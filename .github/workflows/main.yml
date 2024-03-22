@@ -2,8 +2,6 @@ name: Build and Deploy Angular App
 
 on:
   push:
-    branches:    
-      - main
   pull_request:
     branches:
       - main
@@ -25,7 +23,7 @@ jobs:
      - name: Adding Node.js
        uses: actions/setup-node@v4
        with:
-         node-version: 18
+         node-version: 20
          
      - name: Install Angular and Dependencies
        run: npm install -g @angular/cli && npm install
