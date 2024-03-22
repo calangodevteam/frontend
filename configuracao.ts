@@ -1,7 +1,7 @@
 export const Configuracao = {
-    urlQuestao: "/api/questoes",
-    urlQuestionario: "/api/questionarios",
-    urlAreasTemas: "/api/temasareas",
+    urlQuestao: "https://calangodevteam.fly.dev/api/questoes",
+    urlQuestionario: "https://calangodevteam.fly.dev/api/questionarios",
+    urlAreasTemas: "https://calangodevteam.fly.dev/api/temasareas",
     parametroDeSort: { chave: "sort", valor: "desc" },
     parametroDePage: { chave: "page", valor: "0" }
 };
