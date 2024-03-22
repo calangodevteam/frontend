@@ -24,11 +24,11 @@ jobs:
        with:
          node-version: 18
          
-     - name: Install Dependencies
-       run: npm install
+     - name: Install Angular and Dependencies
+       run: npm install -g @angular/cli && npm install
 
      - name: Build Angular App
-       run: npm run build --base-href ./
+       run: ng build --base-href ./
 
      - name: Deploy to gh pages
        run: |
