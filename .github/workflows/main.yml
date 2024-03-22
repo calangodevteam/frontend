@@ -1,10 +1,14 @@
 name: Build and Deploy Angular App
 
 on:
+  
+  workflow_dispatch:
+
   push:
-  pull_request:
     branches:
       - main
+
+  pull_request:
       
 jobs:
   build:
