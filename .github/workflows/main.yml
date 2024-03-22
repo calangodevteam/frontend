@@ -8,7 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
+
+     - name: Set up Git
+       run: |
+         git config --global user.email "calangodevteam@gmail.com"
+         git config --global user.name "${{ github.actor }}"
+        
      - name: Checkout Repository
        uses: actions/checkout@v4
  
