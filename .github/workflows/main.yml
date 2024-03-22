@@ -1,34 +1,32 @@
 name: Build and Deploy Angular App
 
 on:
-  
-  workflow_dispatch:
 
+  workflow_dispatch:
   push:
     branches:
       - main
-
   pull_request:
-      
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
 
      - name: Set up Git
        run: |
          git config --global user.email "calangodevteam@gmail.com"
          git config --global user.name "${{ github.actor }}"
-        
+
      - name: Checkout Repository
        uses: actions/checkout@v4
- 
+
      - name: Adding Node.js
        uses: actions/setup-node@v4
        with:
          node-version: 20
-         
+
      - name: Install Angular and Dependencies
        run: npm install -g @angular/cli && npm install
 
@@ -42,4 +40,4 @@ jobs:
        env:
          CI: true
          GH_TOKEN: ${{ secrets.GHPAGES }}
-     
+
