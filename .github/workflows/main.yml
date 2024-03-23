@@ -21,11 +21,10 @@ jobs:
         working-directory: frontend
         run: npm install && npm run build:prod
 
-      - name: Deploy to gh pages
-        run: |
-          ls -l frontend/dist
-          npx angular-cli-ghpages --dir=frontend/dist --no-silent
-        env:
-          CI: true
-          GHPAGES: ${{ secrets.GH_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: frontend/dist
+          branch: gh-pages
+          token: ${{ secrets.GH_TOKEN }}
 
