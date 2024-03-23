@@ -17,14 +17,17 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install Dependencies
+        run: npm install
+
       - name: Build Angular app to prod
         working-directory: frontend
-        run: npm install && npm run build:prod
+        run: npm run build:prod
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: ./dist/calango-dev
-          branch: gh-pages
-          token: ${{ secrets.GH_TOKEN }}
+      - name: Deploy to gh pages
+        run: |
+          npx angular-cli-ghpages --dir=dist
+        env:
+          CI: true
+          GHPAGES: ${{ secrets.GH_TOKEN }}
 
