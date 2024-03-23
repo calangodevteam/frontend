@@ -26,5 +26,5 @@ jobs:
         with:
           folder: dist/calango-dev
           branch: gh-pages
-          token: ${{ secrets.GHPAGES }}
+          token: ${{ secrets.GH_TOKEN }}
 
