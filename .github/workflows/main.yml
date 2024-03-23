@@ -17,12 +17,9 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Dependencies
-        run: npm install
-
       - name: Build Angular app to prod
         working-directory: frontend
-        run: npm run build:prod
+        run: npm install && npm run build:prod
 
       - name: Deploy to gh pages
         run: |
