@@ -24,7 +24,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: frontend/dist/calango-dev
+          folder: dist/calango-dev
           branch: gh-pages
           token: ${{ secrets.GHPAGES }}
 
