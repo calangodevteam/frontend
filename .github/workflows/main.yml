@@ -23,8 +23,8 @@ jobs:
 
       - name: Deploy to gh pages
         run: |
-          ls -l ./
-          npx angular-cli-ghpages --dir=./ --no-silent
+          ls -l frontend
+          npx angular-cli-ghpages --dir=frontend --no-silent
         env:
           CI: true
           GHPAGES: ${{ secrets.GH_TOKEN }}
