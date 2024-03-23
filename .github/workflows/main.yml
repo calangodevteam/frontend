@@ -23,7 +23,7 @@ jobs:
 
       - name: Deploy to gh pages
         run: |
-          ls -l dist/calango-dev
+          ls -l dist
           npx angular-cli-ghpages --dir=dist --no-silent
         env:
           CI: true
